@@ -6,16 +6,19 @@ logic, and to set up your page’s data binding.
 
 import { EventData } from 'data/observable';
 import { Page } from 'ui/page';
+import { CarDetailsViewModel } from './car-details-view-model';
+
 import frameModule = require("ui/frame");
 
 // Event handler for Page "navigatingTo" event attached in main-page.xml
-export function navigatingTo(args: EventData) {
+export function onNavigatingTo(args: EventData) {
     /*
     This gets a reference this page’s <Page> UI component. You can
     view the API reference of the Page to see what’s available at
     https://docs.nativescript.org/api-reference/classes/_ui_page_.page.html
     */
     let page = <Page>args.object;
+    page.bindingContext = new CarDetailsViewModel(page.navigationContext);
 }
 
 export function onGoBack() {

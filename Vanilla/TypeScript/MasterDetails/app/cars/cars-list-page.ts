@@ -25,7 +25,7 @@ export function onCarItemTap(args) {
 
     frameModule.topmost().navigate({
         moduleName: "cars/car-details-page/car-details-page",
-        bindingContext: tappedCarItem
+        context: tappedCarItem
     });
 }
 
