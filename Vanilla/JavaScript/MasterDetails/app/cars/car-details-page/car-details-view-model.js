@@ -3,7 +3,7 @@ var Observable = require("data/observable").Observable;
 function CarDetailsViewModel(carModel) {
     var viewModel = new Observable();
 
-    viewModel.carModel = carModel;
+    viewModel.car = carModel;
 
     return viewModel;
 }

@@ -10,7 +10,7 @@ https://docs.nativescript.org/ui/components.
     http://docs.nativescript.org/ui/action-bar
     -->
     <Page.actionBar>
-        <ActionBar title="{{ carModel.name }}" icon="" class="action-bar">
+        <ActionBar title="{{ car.name }}" icon="" class="action-bar">
             <NavigationButton tap="onGoBack" android.systemIcon="ic_menu_back"/>
         </ActionBar>
     </Page.actionBar>
@@ -18,14 +18,14 @@ https://docs.nativescript.org/ui/components.
     <GridLayout>
         <ScrollView>
             <StackLayout>
-                <Image src="{{ carModel.imageUrl }}" stretch="aspectFit"/>
+                <Image src="{{ car.imageUrl }}" stretch="aspectFit"/>
 
                 <StackLayout>
                     <Label text="Price"/>
                     <Label>
                         <FormattedString>
                             <Span text="€" fontAttributes="Bold"></Span>
-                            <Span text="{{ carModel.price }}" fontAttributes="Bold"></Span>
+                            <Span text="{{ car.price }}" fontAttributes="Bold"></Span>
                             <Span text="/day" fontAttributes="Bold"></Span>
                         </FormattedString>
                     </Label>
@@ -33,32 +33,32 @@ https://docs.nativescript.org/ui/components.
 
                 <StackLayout>
                     <Label text="Class"/>
-                    <Label text="{{ carModel.class }}"/>
+                    <Label text="{{ car.class }}"/>
                 </StackLayout>
 
                 <StackLayout>
                     <Label text="Transmission"/>
-                    <Label text="{{ carModel.transmission }}"/>
+                    <Label text="{{ car.transmission }}"/>
                 </StackLayout>
 
                 <StackLayout>
                     <Label text="Doors"/>
-                    <Label text="{{ carModel.doors }}"/>
+                    <Label text="{{ car.doors }}"/>
                 </StackLayout>
 
                 <StackLayout>
                     <Label text="Luggage"/>
-                    <Label text="{{ carModel.luggage }}"/>
+                    <Label text="{{ car.luggage }}"/>
                 </StackLayout>
 
                 <StackLayout>
                     <Label text="Seats"/>
-                    <Label text="{{ carModel.seats }}"/>
+                    <Label text="{{ car.seats }}"/>
                 </StackLayout>
 
                 <StackLayout>
                     <Label text="Other information"/>
-                    <Label text="{{ carModel.description }}" textWrap="true"/>
+                    <Label text="{{ car.description }}" textWrap="true"/>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

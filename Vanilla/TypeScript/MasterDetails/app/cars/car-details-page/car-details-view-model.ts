@@ -2,15 +2,15 @@ import { Car } from "../../shared/models/car";
 import { Observable } from 'data/observable';
 
 export class CarDetailsViewModel extends Observable {
-    private _carModel: Car;
+    private _car: Car;
 
-    constructor(carModel: Car) {
+    constructor(car: Car) {
         super();
 
-        this._carModel = carModel;
+        this._car = car;
     }
 
-    get carModel(): Car {
-        return this._carModel;
+    get car(): Car {
+        return this._car;
     }
 }
