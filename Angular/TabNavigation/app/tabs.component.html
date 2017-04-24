@@ -1,0 +1,19 @@
+<GridLayout>
+    <ActionBar title="Tabs">
+    </ActionBar>
+
+    <TabView #tabview sdkExampleTitle sdkToggleNavButton>
+        <StackLayout *tabItem="{title: 'Home'}">
+            <HomeComponent></HomeComponent>
+        </StackLayout>
+        <StackLayout *tabItem="{title: 'Browse'}">
+            <BrowseComponent></BrowseComponent>
+        </StackLayout>
+        <StackLayout *tabItem="{title: 'Search'}">
+            <SearchComponent></SearchComponent>
+        </StackLayout>
+        <StackLayout *tabItem="{title: 'Featured'}">
+            <FeaturedComponent></FeaturedComponent>
+        </StackLayout>
+    </TabView>
+</GridLayout>

@@ -1,0 +1,45 @@
+<!--
+The markup in NativeScript apps contains a series of user interface components, each
+of which NativeScript renders with a platform-specific iOS or Android native control.
+You can find a full list of user interface components you can use in your app at
+https://docs.nativescript.org/ui/components.
+-->
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page"
+  xmlns:homeComponent="/home-component"
+  xmlns:searchComponent="/search-component"
+  xmlns:browseComponent="/browse-component"
+  xmlns:featuredComponent="/featured-component">
+    <!--
+    The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
+    http://docs.nativescript.org/ui/action-bar
+    -->
+    <Page.actionBar>
+        <ActionBar title="Rent a car" icon="" class="action-bar">
+        </ActionBar>
+    </Page.actionBar>
+
+    <TabView>
+      <TabView.items>
+        <TabViewItem title="Home">
+          <TabViewItem.view>
+            <homeComponent:Home/>
+          </TabViewItem.view>
+        </TabViewItem>
+        <TabViewItem title="Browse">
+          <TabViewItem.view>
+             <browseComponent:Browse/>
+          </TabViewItem.view>
+        </TabViewItem>
+        <TabViewItem title="Search">
+          <TabViewItem.view>
+             <searchComponent:Search/>
+          </TabViewItem.view>
+        </TabViewItem>
+        <TabViewItem title="Featured">
+          <TabViewItem.view>
+             <featuredComponent:Featured/>
+          </TabViewItem.view>
+        </TabViewItem>
+      </TabView.items>
+    </TabView> 
+</Page>

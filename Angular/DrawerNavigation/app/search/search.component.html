@@ -1,0 +1,16 @@
+<GridLayout>
+    <ActionBar title="Search">
+        <ActionItem android.systemIcon="ic_menu_account_list" (tap)="openDrawer()"></ActionItem>
+    </ActionBar>
+
+    <RadSideDrawer #drawer tkExampleTitle tkToggleNavButton>
+        <StackLayout tkDrawerContent class="sideStackLayout">
+            <StackLayout class="sideTitleStackLayout">
+                <MyDrawer></MyDrawer>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout tkMainContent>
+            <Label text="Search Page"></Label>
+        </StackLayout>
+    </RadSideDrawer>
+</GridLayout>

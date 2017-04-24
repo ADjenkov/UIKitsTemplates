@@ -1,0 +1,66 @@
+<!--
+The markup in NativeScript apps contains a series of user interface components, each
+of which NativeScript renders with a platform-specific iOS or Android native control.
+You can find a full list of user interface components you can use in your app at
+https://docs.nativescript.org/ui/components.
+-->
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" class="page">
+    <!--
+    The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
+    http://docs.nativescript.org/ui/action-bar
+    -->
+    <Page.actionBar>
+        <ActionBar title="{{ name }}" icon="" class="action-bar">
+            <NavigationButton tap="onGoBack" android.systemIcon="ic_menu_back"/>
+        </ActionBar>
+    </Page.actionBar>
+
+    <GridLayout>
+        <ScrollView>
+            <StackLayout>
+                <Image src="{{ imageUrl }}" stretch="aspectFit"/>
+
+                <StackLayout>
+                    <Label text="Price"/>
+                    <Label>
+                        <FormattedString>
+                            <Span text="€" fontAttributes="Bold"></Span>
+                            <Span text="{{ price }}" fontAttributes="Bold"></Span>
+                            <Span text="/day" fontAttributes="Bold"></Span>
+                        </FormattedString>
+                    </Label>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label text="Class"/>
+                    <Label text="{{ class }}"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label text="Transmission"/>
+                    <Label text="{{ transmission }}"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label text="Doors"/>
+                    <Label text="{{ doors }}"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label text="Luggage"/>
+                    <Label text="{{ luggage }}"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label text="Seats"/>
+                    <Label text="{{ seats }}"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label text="Other information"/>
+                    <Label text="{{ description }}" textWrap="true"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </GridLayout>
+</Page>
