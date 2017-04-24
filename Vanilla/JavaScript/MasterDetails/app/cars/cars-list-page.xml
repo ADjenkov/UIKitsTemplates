@@ -21,11 +21,11 @@ https://docs.nativescript.org/ui/components.
                     <Image src="{{ imageUrl }}" stretch="aspectFill" col="0" rowSpan="4"/>
                     <Label text="{{ name }}" col="1" colSpan="2" row="0"/>
 
-                    <Label row="1" col="1" text="Class" horizontalAlignemt="left"/>
-                    <Label row="1" col="2" text="{{ class }}" horizontalAlignemt="right"/>
+                    <Label row="1" col="1" text="Class"/>
+                    <Label row="1" col="2" text="{{ class }}"/>
 
-                    <Label row="2" col="1" text="Transmission" horizontalAlignemt="left"/>
-                    <Label row="2" col="2" text="{{ transmission }}" horizontalAlignemt="right"/>
+                    <Label row="2" col="1" text="Transmission"/>
+                    <Label row="2" col="2" text="{{ transmission }}"/>
 
                     <Label row="3" col="1" colSpan="2">
                         <FormattedString>
@@ -36,34 +36,6 @@ https://docs.nativescript.org/ui/components.
                     </Label>
                 </GridLayout>
             </ListView.itemTemplate>
-
-            <!--ALTERNATIVE TEMPLATE LAYOUT-->
-             <!--<ListView.itemTemplate>
-                <GridLayout columns="*, 2*">
-                    <Image src="{{ imageUrl }}" stretch="aspectFill" col="0"/>
-                    <StackLayout col="1">
-                        <Label text="{{ name }}"/>
-
-                        <StackLayout orientation="horizontal">
-                            <Label text="Class" horizontalAlignemt="left"/>
-                            <Label text="{{ class }}" horizontalAlignemt="right"/>
-                        </StackLayout>
-
-                        <StackLayout orientation="horizontal">
-                            <Label text="Transmission" horizontalAlignemt="left"/>
-                            <Label text="{{ transmission }}" horizontalAlignemt="right"/>
-                        </StackLayout>
-
-                        <Label>
-                            <FormattedString>
-                                <Span text="€" fontAttributes="Bold"></Span>
-                                <Span text="{{ price }}" fontAttributes="Bold"></Span>
-                                <Span text="/day" fontAttributes="Bold"></Span>
-                            </FormattedString>
-                        </Label>
-                    </StackLayout>
-                </GridLayout>
-            </ListView.itemTemplate>-->
         </ListView>
         <ActivityIndicator busy="{{ isLoading }}"/>
     </GridLayout>
