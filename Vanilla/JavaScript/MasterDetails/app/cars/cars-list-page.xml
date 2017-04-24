@@ -15,7 +15,7 @@ https://docs.nativescript.org/ui/components.
     </Page.actionBar>
 
     <GridLayout>
-        <ListView items="{{ carsList }}" itemTap="onCarItemTap">
+        <ListView items="{{ cars }}" itemTap="onCarItemTap">
             <ListView.itemTemplate>
                 <GridLayout columns="*, *, *" rows="*,*,*,*">
                     <Image src="{{ imageUrl }}" stretch="aspectFill" col="0" rowSpan="4"/>

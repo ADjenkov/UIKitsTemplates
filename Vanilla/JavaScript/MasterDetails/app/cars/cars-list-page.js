@@ -10,15 +10,10 @@ JavaScript modules. The CommonJS require() function is how you import
 JavaScript modules defined in other files.
 */
 var observableModule = require("data/observable");
-var CarsListViewModel = require("./cars-list-view-model");
+var CarsViewModel = require("./cars-view-model");
 var frameModule = require("ui/frame");
 
-var carsList = new CarsListViewModel();
-
-var pageData = observableModule.fromObject({
-    carsList: carsList,
-    isLoading: false
-});
+var carsViewModel = new CarsViewModel();
 
 function onNavigatingTo(args) {
     /*
@@ -38,7 +33,7 @@ function onNavigatingTo(args) {
     You can learn more about data binding in NativeScript at
     https://docs.nativescript.org/core-concepts/data-binding.
     */
-    page.bindingContext = pageData;
+    page.bindingContext = carsViewModel;
 
     /*
     Using onNavigatingTo event will trigger fetching on remote data for every page navigation.
@@ -46,11 +41,8 @@ function onNavigatingTo(args) {
     on every page nacigation. 
     */
 
-    carsList.empty();
-    pageData.set("isLoading", true);
-    carsList.load().then(function () {
-        pageData.set("isLoading", false);
-    });
+    carsViewModel.empty();
+    carsViewModel.load();
 }
 
 function onCarItemTap(args) {
@@ -58,7 +50,7 @@ function onCarItemTap(args) {
 
     frameModule.topmost().navigate({
         moduleName: "cars/car-details-page/car-details-page",
-        bindingContext: tappedCarItem
+        context: tappedCarItem
     });
 }
 

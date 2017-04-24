@@ -1,18 +1,25 @@
 var config = require("../shared/config");
 var fetchModule = require("fetch");
-var ObservableArray = require("data/observable-array").ObservableArray;
+var Observable = require("data/observable").Observable;
 
-function CarsListViewModel() {
-    var viewModel = new ObservableArray([]);
+function CarsViewModel() {
+    var viewModel = new Observable();
+
+    viewModel.isLoading = false;
+    viewModel.cars = [];
 
     viewModel.load = function () {
-        return fetch(config.apiUrl + "Cars")
+        this.set("isLoading", true);
+
+        fetch(config.apiUrl + "Cars")
             .then(handleErrors)
             .then(function (response) {
                 return response.json();
             }).then(function (data) {
+                var cars = [];
+
                 data.Result.forEach(function (car) {
-                    viewModel.push({
+                    cars.push({
                         name: car.Name,
                         id: car.Id,
                         hasAC: car.AC,
@@ -26,14 +33,18 @@ function CarsListViewModel() {
                         imageUrl: car.ImageUrl
                     });
                 });
+
+                viewModel.set("cars", cars);
+                viewModel.set("isLoading", false);
             });
     }
 
     viewModel.empty = function () {
-        while (viewModel.length) {
-            viewModel.pop();
+        if (this.cars.length) {
+            this.set("cars", []);
         }
     };
+
     return viewModel;
 }
 
@@ -44,4 +55,4 @@ function handleErrors(response) {
     }
     return response;
 }
-module.exports = CarsListViewModel;
+module.exports = CarsViewModel;

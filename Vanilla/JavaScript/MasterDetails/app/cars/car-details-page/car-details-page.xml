@@ -4,13 +4,13 @@ of which NativeScript renders with a platform-specific iOS or Android native con
 You can find a full list of user interface components you can use in your app at
 https://docs.nativescript.org/ui/components.
 -->
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" class="page">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
     <!--
     The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
     http://docs.nativescript.org/ui/action-bar
     -->
     <Page.actionBar>
-        <ActionBar title="{{ name }}" icon="" class="action-bar">
+        <ActionBar title="{{ carModel.name }}" icon="" class="action-bar">
             <NavigationButton tap="onGoBack" android.systemIcon="ic_menu_back"/>
         </ActionBar>
     </Page.actionBar>
@@ -18,14 +18,14 @@ https://docs.nativescript.org/ui/components.
     <GridLayout>
         <ScrollView>
             <StackLayout>
-                <Image src="{{ imageUrl }}" stretch="aspectFit"/>
+                <Image src="{{ carModel.imageUrl }}" stretch="aspectFit"/>
 
                 <StackLayout>
                     <Label text="Price"/>
                     <Label>
                         <FormattedString>
                             <Span text="€" fontAttributes="Bold"></Span>
-                            <Span text="{{ price }}" fontAttributes="Bold"></Span>
+                            <Span text="{{ carModel.price }}" fontAttributes="Bold"></Span>
                             <Span text="/day" fontAttributes="Bold"></Span>
                         </FormattedString>
                     </Label>
@@ -33,32 +33,32 @@ https://docs.nativescript.org/ui/components.
 
                 <StackLayout>
                     <Label text="Class"/>
-                    <Label text="{{ class }}"/>
+                    <Label text="{{ carModel.class }}"/>
                 </StackLayout>
 
                 <StackLayout>
                     <Label text="Transmission"/>
-                    <Label text="{{ transmission }}"/>
+                    <Label text="{{ carModel.transmission }}"/>
                 </StackLayout>
 
                 <StackLayout>
                     <Label text="Doors"/>
-                    <Label text="{{ doors }}"/>
+                    <Label text="{{ carModel.doors }}"/>
                 </StackLayout>
 
                 <StackLayout>
                     <Label text="Luggage"/>
-                    <Label text="{{ luggage }}"/>
+                    <Label text="{{ carModel.luggage }}"/>
                 </StackLayout>
 
                 <StackLayout>
                     <Label text="Seats"/>
-                    <Label text="{{ seats }}"/>
+                    <Label text="{{ carModel.seats }}"/>
                 </StackLayout>
 
                 <StackLayout>
                     <Label text="Other information"/>
-                    <Label text="{{ description }}" textWrap="true"/>
+                    <Label text="{{ carModel.description }}" textWrap="true"/>
                 </StackLayout>
             </StackLayout>
         </ScrollView>
