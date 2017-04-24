@@ -1,4 +1,4 @@
-<dpg:DrawerPage loaded="pageLoaded" 
+<dpg:DrawerPage
     navigatedTo="onNavigatingTo"  
     xmlns:dpg="nativescript-telerik-ui/sidedrawer/drawerpage"
     xmlns:drawer="nativescript-telerik-ui/sidedrawer"
