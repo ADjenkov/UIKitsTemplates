@@ -1,12 +1,13 @@
 var config = require("../shared/config");
 var fetchModule = require("fetch");
 var Observable = require("data/observable").Observable;
+var ObservableArray = require("data/observable-array").ObservableArray;
 
 function CarsViewModel() {
     var viewModel = new Observable();
 
     viewModel.isLoading = false;
-    viewModel.cars = [];
+    viewModel.cars = new ObservableArray([]);
 
     viewModel.load = function () {
         this.set("isLoading", true);
@@ -16,10 +17,8 @@ function CarsViewModel() {
             .then(function (response) {
                 return response.json();
             }).then(function (data) {
-                var cars = [];
-
                 data.Result.forEach(function (car) {
-                    cars.push({
+                    viewModel.cars.push({
                         name: car.Name,
                         id: car.Id,
                         hasAC: car.AC,
@@ -34,14 +33,13 @@ function CarsViewModel() {
                     });
                 });
 
-                viewModel.set("cars", cars);
                 viewModel.set("isLoading", false);
             });
     }
 
     viewModel.empty = function () {
-        if (this.cars.length) {
-            this.set("cars", []);
+        while(this.cars.length) {
+            this.cars.pop();
         }
     };
 
