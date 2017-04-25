@@ -1,5 +1,5 @@
-import { Car } from "../shared/models/car";
-import { Config } from "../shared/config";
+import { Car } from "./shared/models/car";
+import { Config } from "./shared/config";
 import { Observable } from 'data/observable';
 import { ObservableArray } from 'data/observable-array';
 

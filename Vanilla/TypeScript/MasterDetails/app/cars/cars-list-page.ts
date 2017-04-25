@@ -10,7 +10,7 @@ JavaScript modules. The CommonJS require() function is how you import
 JavaScript modules defined in other files.
 */
 
-import { Car } from "../shared/models/car";
+import { Car } from "./shared/models/car";
 import { EventData } from 'data/observable';
 import { Page } from 'ui/page';
 import { CarsViewModel } from './cars-view-model';
