@@ -1,6 +1,6 @@
 var Observable = require("data/observable").Observable;
 
-function CarDetailsViewModel(carModel) {
+function CarDetailViewModel(carModel) {
     var viewModel = new Observable();
 
     viewModel.car = carModel;
@@ -8,4 +8,4 @@ function CarDetailsViewModel(carModel) {
     return viewModel;
 }
 
-module.exports = CarDetailsViewModel;
+module.exports = CarDetailViewModel;

@@ -1,8 +1,6 @@
-
 var SearchViewModel = require("./search-view-model");
-
-var search = new SearchViewModel();
+var searchViewModel = new SearchViewModel();
 
 exports.loaded = function (args) {
-    args.object.bindingContext = search;
+    args.object.bindingContext = searchViewModel;
 };

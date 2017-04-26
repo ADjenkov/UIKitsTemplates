@@ -8,10 +8,11 @@ logic, and to set up your page’s data binding.
 NativeScript adheres to the CommonJS specification for dealing with
 JavaScript modules. The CommonJS require() function is how you import
 JavaScript modules defined in other files.
-*/ 
+*/
 var frameModule = require("ui/frame");
+var SettingsViewModel = require("./settings-view-model");
 
-var createViewModel = require("./settings-view-model").createViewModel;
+var settingsViewModel = new SettingsViewModel();
 
 function onNavigatingTo(args) {
     /*
@@ -31,7 +32,7 @@ function onNavigatingTo(args) {
     You can learn more about data binding in NativeScript at
     https://docs.nativescript.org/core-concepts/data-binding.
     */
-    page.bindingContext = createViewModel();
+    page.bindingContext = settingsViewModel;
 }
 
 function onOpenDrawerTap() {

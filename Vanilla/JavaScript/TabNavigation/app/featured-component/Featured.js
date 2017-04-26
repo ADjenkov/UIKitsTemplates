@@ -1,8 +1,6 @@
-
 var FeaturedViewModel = require("./featured-view-model");
-
-var featured = new FeaturedViewModel();
+var featuredViewModel = new FeaturedViewModel();
 
 exports.loaded = function (args) {
-    args.object.bindingContext = featured;
+    args.object.bindingContext = featuredViewModel;
 };

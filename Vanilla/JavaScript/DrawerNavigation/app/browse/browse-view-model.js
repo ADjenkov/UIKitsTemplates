@@ -1,9 +1,9 @@
 var Observable = require("data/observable").Observable;
 
-function createViewModel() {
+function BrowseViewModel() {
     var viewModel = new Observable();
 
     return viewModel;
 }
 
-exports.createViewModel = createViewModel;
+module.exports = BrowseViewModel;

@@ -1,4 +1,4 @@
-var CarDetailsViewModel = require("./car-detail-view-model");
+var CarDetailViewModel = require("./car-detail-view-model");
 var frameModule = require("ui/frame");
 
 function onNavigatingTo(args) {
@@ -19,7 +19,7 @@ function onNavigatingTo(args) {
     You can learn more about data binding in NativeScript at
     https://docs.nativescript.org/core-concepts/data-binding.
     */
-    page.bindingContext = new CarDetailsViewModel(page.navigationContext);
+    page.bindingContext = new CarDetailViewModel(page.navigationContext);
 }
 
 function onGoBack() {

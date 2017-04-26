@@ -1,8 +1,6 @@
-
 var BrowseViewModel = require("./browse-view-model");
-
-var browse = new BrowseViewModel();
+var browseViewModel = new BrowseViewModel();
 
 exports.loaded = function (args) {
-    args.object.bindingContext = browse;
+    args.object.bindingContext = browseViewModel;
 };
