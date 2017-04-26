@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from "@angular/core";
 import { RadSideDrawerComponent } from "nativescript-telerik-ui/sidedrawer/angular";
 
 @Component({
-    selector: "ns-featured",
+    selector: "Featured",
     moduleId: module.id,
     templateUrl: "./featured.component.html",
 })

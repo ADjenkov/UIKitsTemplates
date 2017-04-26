@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 
 @Component({
-    selector: "FeaturedComponent",
+    selector: "Featured",
     moduleId: module.id,
     templateUrl: "./featured.component.html",
 })

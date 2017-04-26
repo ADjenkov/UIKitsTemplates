@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from "@angular/core";
 import { RadSideDrawerComponent } from "nativescript-telerik-ui/sidedrawer/angular";
 
 @Component({
-    selector: "ns-home",
+    selector: "Home",
     moduleId: module.id,
     templateUrl: "./home.component.html",
 })

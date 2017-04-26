@@ -7,23 +7,23 @@ let model = {
     items: [
         {
             title: "Home",
-            route: "home/home"
+            route: "home/home-page"
         },
         {
             title: "Browse",
-            route: "browse/browse"
+            route: "browse/browse-page"
         },
         {
             title: "Search",
-            route: "search/search"
+            route: "search/search-page"
         },
         {
             title: "Featured",
-            route: "featured/featured"
+            route: "featured/featured-page"
         },
         {
             title: "Settings",
-            route: "settings/settings"
+            route: "settings/settings-page"
         }
     ]
 };

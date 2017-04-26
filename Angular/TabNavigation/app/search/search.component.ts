@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
 @Component({
-    selector: "SearchComponent",
+    selector: "Search",
     moduleId: module.id,
     templateUrl: "./search.component.html",
 })

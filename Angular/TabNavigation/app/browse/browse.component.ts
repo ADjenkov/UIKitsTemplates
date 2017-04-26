@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
 @Component({
-    selector: "BrowseComponent",
+    selector: "Browse",
     moduleId: module.id,
     templateUrl: "./browse.component.html",
 })
