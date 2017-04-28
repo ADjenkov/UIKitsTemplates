@@ -3,5 +3,6 @@ if (global.TNS_WEBPACK) {
     require("bundle-entry-points");
 
     //register application modules
-    global.registerModule("cars-list-page", function () { return require("./cars/cars-list-page"); });
+    global.registerModule("cars/cars-list-page", function () { return require("./cars/cars-list-page"); });
+    global.registerModule("cars/car-detail-page/car-detail-page", function () { return require("./cars/car-detail-page/car-detail-page"); });
 }
