@@ -3,7 +3,7 @@ var fetchModule = require("fetch");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
 
-function CarsViewModel() {
+function CarsListViewModel() {
     var viewModel = new Observable();
 
     viewModel.isLoading = false;
@@ -53,4 +53,4 @@ function handleErrors(response) {
     }
     return response;
 }
-module.exports = CarsViewModel;
+module.exports = CarsListViewModel;

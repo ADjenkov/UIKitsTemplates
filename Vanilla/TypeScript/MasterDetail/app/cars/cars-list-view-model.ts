@@ -3,7 +3,7 @@ import { Config } from "../shared/config";
 import { Observable } from 'data/observable';
 import { ObservableArray } from 'data/observable-array';
 
-export class CarsViewModel extends Observable {
+export class CarsListViewModel extends Observable {
     private _isLoading: boolean;
     private _cars: ObservableArray<Car>;
 

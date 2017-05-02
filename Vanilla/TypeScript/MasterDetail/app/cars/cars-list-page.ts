@@ -13,12 +13,12 @@ JavaScript modules defined in other files.
 import { Car } from "./shared/car-model";
 import { EventData } from 'data/observable';
 import { Page } from 'ui/page';
-import { CarsViewModel } from './cars-list-view-model';
+import { CarsListViewModel } from './cars-list-view-model';
 
 import frameModule = require("ui/frame");
 import observableModule = require("data/observable");
 
-var carsViewModel = new CarsViewModel();
+var carsListViewModel = new CarsListViewModel();
 
 export function onCarItemTap(args) {
     var tappedCarItem = args.view.bindingContext;
@@ -49,8 +49,8 @@ export function onNavigatingTo(args: EventData) {
     https://docs.nativescript.org/core-concepts/data-binding.
     */
 
-    page.bindingContext = carsViewModel;
+    page.bindingContext = carsListViewModel;
 
-    carsViewModel.empty();
-    carsViewModel.load();
+    carsListViewModel.empty();
+    carsListViewModel.load();
 }
