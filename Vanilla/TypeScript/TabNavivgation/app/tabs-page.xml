@@ -5,10 +5,10 @@ You can find a full list of user interface components you can use in your app at
 https://docs.nativescript.org/ui/components.
 -->
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page"
-  xmlns:homeComponent="/home-component"
-  xmlns:searchComponent="/search-component"
-  xmlns:browseComponent="/browse-component"
-  xmlns:featuredComponent="/featured-component">
+  xmlns:home="/home"
+  xmlns:search="/search"
+  xmlns:browse="/browse"
+  xmlns:featured="/featured">
     <!--
     The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
     http://docs.nativescript.org/ui/action-bar
@@ -22,22 +22,22 @@ https://docs.nativescript.org/ui/components.
       <TabView.items>
         <TabViewItem title="Home">
           <TabViewItem.view>
-            <homeComponent:Home/>
+            <home:HomeView/>
           </TabViewItem.view>
         </TabViewItem>
         <TabViewItem title="Browse">
           <TabViewItem.view>
-             <browseComponent:Browse/>
+             <browse:BrowseView/>
           </TabViewItem.view>
         </TabViewItem>
         <TabViewItem title="Search">
           <TabViewItem.view>
-             <searchComponent:Search/>
+             <search:SearchView/>
           </TabViewItem.view>
         </TabViewItem>
         <TabViewItem title="Featured">
           <TabViewItem.view>
-             <featuredComponent:Featured/>
+             <featured:FeaturedView/>
           </TabViewItem.view>
         </TabViewItem>
       </TabView.items>
