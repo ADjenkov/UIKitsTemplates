@@ -1,4 +1,6 @@
 {
+  "name": "nativescript-ng-ui-kit-drawer",
+  "version": "0.1.0",
   "description": "NativeScript Application",
   "license": "SEE LICENSE IN <your-license-filename>",
   "readme": "NativeScript Application",
