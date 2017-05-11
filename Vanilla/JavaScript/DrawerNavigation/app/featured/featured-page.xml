@@ -1,33 +1,32 @@
-<dpg:DrawerPage
+<Page
     navigatedTo="onNavigatingTo"  
-    xmlns:dpg="nativescript-telerik-ui/sidedrawer/drawerpage"
-    xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+    xmlns:nsDrawer="nativescript-telerik-ui/sidedrawer"
     xmlns:myDrawer="shared/my-drawer"
     xmlns="http://www.nativescript.org/tns.xsd">
-
-    <dpg:DrawerPage.sideDrawer>
-        <drawer:RadSideDrawer id="sideDrawer">
-          <!--Customize your transition-->
-          <drawer:RadSideDrawer.drawerTransition>
-            <drawer:PushTransition/>
-          </drawer:RadSideDrawer.drawerTransition>
-
-          <drawer:RadSideDrawer.drawerContent>
-            <!--Add your drawer content here. If it's a custom component, add the xmlns to the DrawerPage tag above-->
-            <StackLayout>
-                <myDrawer:MyDrawer />
-            </StackLayout>
-            <!--End of drawer content-->
-          </drawer:RadSideDrawer.drawerContent>
-        </drawer:RadSideDrawer>
-    </dpg:DrawerPage.sideDrawer>
 
     <!--Add your page content here-->
     <ActionBar title="Featured">
         <ActionItem android.systemIcon="ic_menu_account_list" tap="onOpenDrawerTap" />
     </ActionBar>
 
-    <StackLayout>
-        <Label text="Featured Page"/>
-    </StackLayout>
-</dpg:DrawerPage>
+    <nsDrawer:RadSideDrawer id="sideDrawer" showOverNavigation="true">
+        <!--Customize your transition-->
+        <nsDrawer:RadSideDrawer.drawerTransition>
+            <nsDrawer:PushTransition/>
+        </nsDrawer:RadSideDrawer.drawerTransition>
+
+        <nsDrawer:RadSideDrawer.drawerContent>
+            <!--Add your drawer content here. If it's a custom component, add the xmlns to the DrawerPage tag above-->
+            <StackLayout>
+                <myDrawer:MyDrawer />
+            </StackLayout>
+            <!--End of drawer content-->
+        </nsDrawer:RadSideDrawer.drawerContent>
+
+        <nsDrawer:RadSideDrawer.mainContent>
+            <StackLayout>
+                <Label text="Featured Page"/>
+            </StackLayout>
+        </nsDrawer:RadSideDrawer.mainContent>
+    </nsDrawer:RadSideDrawer>
+</Page>
