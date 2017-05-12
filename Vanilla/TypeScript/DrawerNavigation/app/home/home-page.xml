@@ -1,5 +1,5 @@
 <Page
-    navigatedTo="onNavigatingTo"  
+    navigatingTo="onNavigatingTo"  
     xmlns:nsDrawer="nativescript-telerik-ui/sidedrawer"
     xmlns:myDrawer="shared/my-drawer"
     xmlns="http://www.nativescript.org/tns.xsd">
