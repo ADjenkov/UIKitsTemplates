@@ -4,9 +4,7 @@ import { NativeScriptHttpModule } from "nativescript-angular/http";
 import { AppRoutingModule } from "./app.routing";
 import { AppComponent } from "./app.component";
 
-// import { ItemService } from "./item/item.service";
-// import { ItemsComponent } from "./item/items.component";
-// import { ItemDetailComponent } from "./item/item-detail.component";
+import { NativeScriptUIListViewModule } from "nativescript-telerik-ui/listview/angular";
 
 import { CarsService } from "./cars/shared/cars.service";
 import { CarsListComponent } from "./cars/cars-list.component";
@@ -19,7 +17,8 @@ import { CarDetailComponent } from "./cars/car-detail/car-detail.component";
     imports: [
         NativeScriptModule,
         NativeScriptHttpModule,
-        AppRoutingModule
+        AppRoutingModule,
+        NativeScriptUIListViewModule
     ],
     declarations: [
         AppComponent,

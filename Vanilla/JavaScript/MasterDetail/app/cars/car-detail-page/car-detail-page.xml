@@ -9,11 +9,9 @@ https://docs.nativescript.org/ui/components.
     The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
     http://docs.nativescript.org/ui/action-bar
     -->
-    <Page.actionBar>
-        <ActionBar title="{{ car.name }}" icon="" class="action-bar">
-            <NavigationButton tap="onGoBack" android.systemIcon="ic_menu_back"/>
-        </ActionBar>
-    </Page.actionBar>
+    <ActionBar title="{{ car.name }}" icon="" class="action-bar">
+        <NavigationButton tap="onGoBack" android.systemIcon="ic_menu_back"/>
+    </ActionBar>
 
     <GridLayout>
         <ScrollView>

@@ -4,19 +4,23 @@ of which NativeScript renders with a platform-specific iOS or Android native con
 You can find a full list of user interface components you can use in your app at
 https://docs.nativescript.org/ui/components.
 -->
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+<Page navigatingTo="onNavigatingTo" class="page"
+    xmlns:lv="nativescript-telerik-ui/listview"
+    xmlns="http://schemas.nativescript.org/tns.xsd">
     <!--
     The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
     http://docs.nativescript.org/ui/action-bar
     -->
-    <Page.actionBar>
-        <ActionBar title="Car Rental" icon="" class="action-bar">
-        </ActionBar>
-    </Page.actionBar>
+    <ActionBar title="Car Rental" icon="" class="action-bar">
+    </ActionBar>
 
     <GridLayout>
-        <ListView items="{{ cars }}" itemTap="onCarItemTap">
-            <ListView.itemTemplate>
+        <lv:RadListView items="{{ cars }}" itemTap="onCarItemTap">
+            <lv:RadListView.listViewLayout>
+                <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+            </lv:RadListView.listViewLayout>
+
+            <lv:RadListView.itemTemplate>
                 <GridLayout columns="*, *, *" rows="*,*,*,*">
                     <Image src="{{ imageUrl }}" stretch="aspectFill" col="0" rowSpan="4"/>
                     <Label text="{{ name }}" col="1" colSpan="2" row="0"/>
@@ -35,8 +39,9 @@ https://docs.nativescript.org/ui/components.
                         </FormattedString>
                     </Label>
                 </GridLayout>
-            </ListView.itemTemplate>
-        </ListView>
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
+
         <ActivityIndicator busy="{{ isLoading }}"/>
     </GridLayout>
 </Page>

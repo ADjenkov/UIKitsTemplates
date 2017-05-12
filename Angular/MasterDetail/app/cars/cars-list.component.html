@@ -3,8 +3,8 @@
     </ActionBar>
 
     <GridLayout>
-        <ListView [items]="cars" (itemTap)="onCarItemTap($event)">
-            <ng-template let-car="item">
+        <RadListView [items]="cars" (itemTap)="onCarItemTap($event)">
+            <ng-template tkListItemTemplate let-car="item">
                 <GridLayout columns="*, *, *" rows="*,*,*,*">
                     <Image col="0" rowSpan="4" [src]="car.imageUrl"></Image>
                     <Label col="1" colSpan="2" row="0" [text]="car.name"></Label>
@@ -24,7 +24,7 @@
                     </Label>
                 </GridLayout>
             </ng-template>
-        </ListView>
+        </RadListView>
         
         <ActivityIndicator [busy]="isLoading"></ActivityIndicator>
     </GridLayout>
