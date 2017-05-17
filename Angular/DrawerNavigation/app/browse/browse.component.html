@@ -3,12 +3,13 @@
         <ActionItem android.systemIcon="ic_menu_account_list" (tap)="openDrawer()"></ActionItem>
     </ActionBar>
 
-    <RadSideDrawer #drawer tkExampleTitle tkToggleNavButton>
+    <RadSideDrawer #drawer showOverNavigation="true" tkExampleTitle tkToggleNavButton>
         <StackLayout tkDrawerContent>
             <StackLayout>
                 <MyDrawer></MyDrawer>
             </StackLayout>
         </StackLayout>
+        
         <StackLayout tkMainContent>
             <Label text="Browse Page"></Label>
         </StackLayout>
