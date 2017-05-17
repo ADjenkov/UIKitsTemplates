@@ -13,3 +13,4 @@
 ### Drawer
 
 ##### Use RadSideDrawer only as a root to the Page element. In Angular, the Page element is hidden - use at root level.
+##### Never Use RadSideDrawer in custom component in Vanilla or shared component in Angular.
