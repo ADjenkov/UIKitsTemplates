@@ -1,17 +1,15 @@
-<GridLayout>
-    <ActionBar title="Search">
-        <ActionItem android.systemIcon="ic_menu_account_list" (tap)="openDrawer()"></ActionItem>
-    </ActionBar>
+<ActionBar title="Search">
+    <ActionItem android.systemIcon="ic_menu_account_list" (tap)="openDrawer()"></ActionItem>
+</ActionBar>
 
-    <RadSideDrawer #drawer showOverNavigation="true" tkExampleTitle tkToggleNavButton>
-        <StackLayout tkDrawerContent>
-            <StackLayout>
-                <MyDrawer></MyDrawer>
-            </StackLayout>
+<RadSideDrawer #drawer showOverNavigation="true" [drawerTransition]="sideDrawerTransition" tkExampleTitle tkToggleNavButton>
+    <StackLayout tkDrawerContent>
+        <StackLayout>
+            <MyDrawer></MyDrawer>
         </StackLayout>
-        
-        <StackLayout tkMainContent>
-            <Label text="Search Page"></Label>
-        </StackLayout>
-    </RadSideDrawer>
-</GridLayout>
+    </StackLayout>
+    
+    <StackLayout tkMainContent>
+        <Label text="Search Page"></Label>
+    </StackLayout>
+</RadSideDrawer>
