@@ -49,7 +49,7 @@ export class CarsListComponent implements OnInit {
     }
 
     public onCarItemTap(args) {
-        var tappedCarItem = args.view.bindingContext;
+        var tappedCarItem = args.object.bindingContext;
 
         this.routerExtensions.navigate(["/car-detail", tappedCarItem.id]);
     }

@@ -20,15 +20,6 @@ import observableModule = require("data/observable");
 
 var carsListViewModel = new CarsListViewModel();
 
-export function onCarItemTap(args) {
-    var tappedCarItem = args.view.bindingContext;
-
-    frameModule.topmost().navigate({
-        moduleName: "cars/car-detail-page/car-detail-page",
-        context: tappedCarItem
-    });
-}
-
 // Event handler for Page "navigatingTo" event attached in main-page.xml
 export function onNavigatingTo(args: EventData) {
     /*
@@ -53,4 +44,13 @@ export function onNavigatingTo(args: EventData) {
 
     carsListViewModel.empty();
     carsListViewModel.load();
+}
+
+export function onCarItemTap(args) {
+    var tappedCarItem = args.object.bindingContext;
+
+    frameModule.topmost().navigate({
+        moduleName: "cars/car-detail-page/car-detail-page",
+        context: tappedCarItem
+    });
 }

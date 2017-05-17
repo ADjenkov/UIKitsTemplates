@@ -1,5 +1,5 @@
 import { EventData } from 'data/observable';
-import { DrawerPage } from 'nativescript-telerik-ui/sidedrawer/drawerpage';
+import { Page } from 'ui/page';
 import { SettingsViewModel } from './settings-view-model';
 
 import { RadSideDrawer } from 'nativescript-telerik-ui/sidedrawer';
@@ -13,7 +13,7 @@ export function onNavigatingTo(args: EventData) {
     view the API reference of the Page to see what’s available at
     https://docs.nativescript.org/api-reference/classes/_ui_page_.page.html
     */
-    page = <DrawerPage>args.object;
+    page = <Page>args.object;
     page.bindingContext = new SettingsViewModel();
 }
 
