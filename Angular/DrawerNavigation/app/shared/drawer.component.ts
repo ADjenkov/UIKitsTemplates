@@ -44,7 +44,7 @@ export class DrawerComponent implements OnInit {
     ngOnInit(): void {
     }
 
-    navigateToRoute(route:string, index:number): void {
+    navigateToRoute(route:string): void {
         this.routerExtensions.navigate([route]);
     }
 }

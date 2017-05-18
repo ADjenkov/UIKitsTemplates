@@ -8,7 +8,7 @@
         <ListView [items]="items" separatorColor="transparent">
             <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
                 <GridLayout rows="*" columns="auto, *"
-                    (tap)="navigateToRoute(item.route, index)"
+                    (tap)="navigateToRoute(item.route)"
                     class="sidedrawer-list-item" 
                     [class.selected]="item.title===current">
                     <Label row="0" col="0" [text]="item.icon" class="fa p-l-15 p-r-5"></Label>
