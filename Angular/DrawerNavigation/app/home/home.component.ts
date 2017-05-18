@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { RadSideDrawerComponent } from "nativescript-telerik-ui/sidedrawer/angular";
+import { DrawerTransitionBase, SlideInOnTopTransition } from "nativescript-telerik-ui/sidedrawer";
 
 @Component({
     selector: "Home",
@@ -7,10 +8,12 @@ import { RadSideDrawerComponent } from "nativescript-telerik-ui/sidedrawer/angul
     templateUrl: "./home.component.html",
 })
 export class HomeComponent implements OnInit {
+    public sideDrawerTransition: DrawerTransitionBase;
+
     @ViewChild("drawer") public drawerComponent: RadSideDrawerComponent;
 
     constructor() {
-
+        this.sideDrawerTransition = new SlideInOnTopTransition();
     }
 
     ngOnInit(): void {
