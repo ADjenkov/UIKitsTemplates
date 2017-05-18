@@ -14,10 +14,5 @@
 // Import the theme’s main ruleset.
 @import url('~/platform.css');
 @import '~nativescript-theme-core/scss/index';
-
-// Start custom common styles
-@import 'sass/app-action-bar';
-// End custom common styles
-
 // Place any CSS rules you want to apply on both iOS and Android here.
 // This is where the vast majority of your CSS code goes.
