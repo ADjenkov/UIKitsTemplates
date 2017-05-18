@@ -10,7 +10,7 @@
                 <GridLayout rows="*" columns="auto, *"
                     (tap)="navigateToRoute(item.route)"
                     class="sidedrawer-list-item" 
-                    [class.selected]="item.title===current">
+                    [class.selected]="item.title===selectedPage">
                     <Label row="0" col="0" [text]="item.icon" class="fa p-l-15 p-r-5"></Label>
                     <Label row="0" col="1" [text]="item.title" textWrap="true"></Label>
                 </GridLayout>

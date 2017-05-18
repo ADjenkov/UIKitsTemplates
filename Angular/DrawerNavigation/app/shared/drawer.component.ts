@@ -8,7 +8,7 @@ import { RouterExtensions } from "nativescript-angular/router";
     styleUrls: ["./drawer.component.css"]
 })
 export class DrawerComponent implements OnInit {
-    @Input() current: string;
+    @Input() selectedPage: string;
     items: any = [
         {
             title: "Home",
