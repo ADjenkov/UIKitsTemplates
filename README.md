@@ -1,12 +1,28 @@
 # Guidelines
 
+
 ## General
 
 ##### Do define one thing, such as a service, component or model, per file.
+
 ##### Consider limiting files to 400 lines of code.
+
 ##### Consider limiting functions to no more than 75 lines.
 
-## Naming
+
+## Structure
+
+##### Do create folders named for the feature area they represent.
+
+##### [Angular] Do create an Angular module for each feature area.
+
+##### Do create a feature module named SharedModule in a shared folder; for example, app/shared/shared.module.ts defines SharedModule. For Vanilla simply have a shared folder.
+
+##### Do declare symbols in a shared module when those items will be re-used and referenced by the components declared in other feature modules.
++ Drawer Navigation
+
+##### [Angular] Do import all external modules required by the assets in the SharedModule; for example, CommonModule and FormsModule.
++ UI For Nativescript Drawer modules
 
 ##### Names of folders and files should clearly convey their intent. For example, app/heroes/hero-list.component.ts may contain a component that manages a list of heroes.
 + **Angular/TabNavaigtion**
@@ -54,15 +70,56 @@
   - cars-list-view-model.ts -> class CarsListViewModel
   - car-model.ts -> class Car (exception)
   
-  
-  
-## Components
+##### Do name the style file [component-name].component.css, where [component-name] is the component name.
 
+##### Do give the file name the .module.ts extension and append the symbol name with the suffix Module. Do name the module after the feature and folder it resides in.
++ **Angular/MasterDetail**
+  - cars/cars.modules.ts -> class CarsModule
+
+##### Do suffix a RoutingModule class name with RoutingModule and Do end the filename of a RoutingModule with -routing.module.ts.
++ **Angular/MasterDetail**
+  - cars/cars-routing.module.ts -> class CarsRoutingModule
+  
 ##### Do use an uppercase element selector value (e.g. AdminUsers) for components.
 + **Angular/TabNavaigtion**
   - search.component.ts -> selector: "Search"
 + **Vanilla/TabNavigation**
   - SearchView.xml|js (selector comes from the name of the file)
+  
+##### Delegate complex component logic to services
+
+##### Do refactor logic for making data operations and interacting with data to a service.
+  
+  
+## Code
+
+##### Consider leaving one empty line between third party imports and application imports.
+
+##### Consider listing import lines alphabetized by the module.
+
+##### [TS/Angular] Consider listing destructured imported symbols alphabetically.
+
+##### Do place properties up top followed by methods.
+
+##### Do place private members after public members, alphabetized.
+
+##### [TS/Angular] Do declare variables with let instead of var.
+
+##### [TS/Angular] Do declare variables with const if their values should not change during the application lifetime.
+
+##### Consider spelling const variables in lower camel case.
+
+##### Do name event handler methods with the prefix on followed by the event name.
++ loaded -> onLoaded()
++ itemTap -> onItemTap()
+
+##### Do limit logic in a component/code-behind/view-model to only that required for the view. All other logic should be delegated to services.
+
+##### Do put presentation logic in the component class, and not in the template. 
++ Average power: {{totalPowers / heroes.length}} (Wrong)
+
+
+## UI Components Specific
 
 ### ActionBar
 
