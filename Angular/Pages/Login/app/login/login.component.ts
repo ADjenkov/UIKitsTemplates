@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { RouterExtensions } from "nativescript-angular/router";
+
 import * as Facebook from "nativescript-facebook";
 
 @Component({
@@ -23,5 +24,8 @@ export class LoginComponent implements OnInit {
         if (!error && loginResponse) {
             LoginComponent.that.routerExtensions.navigate(["/home"], { clearHistory: true });
         }
+    }
+
+    onSignIn() {
     }
 }
