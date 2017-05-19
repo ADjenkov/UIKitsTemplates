@@ -1,19 +1,17 @@
-<GridLayout>
-    <ActionBar title="Tabs">
-    </ActionBar>
+<ActionBar title="Tabs">
+</ActionBar>
 
-    <TabView #tabview sdkExampleTitle sdkToggleNavButton>
-        <StackLayout *tabItem="{title: 'Home'}">
-            <Home></Home>
-        </StackLayout>
-        <StackLayout *tabItem="{title: 'Browse'}">
-            <Browse></Browse>
-        </StackLayout>
-        <StackLayout *tabItem="{title: 'Search'}">
-            <Search></Search>
-        </StackLayout>
-        <StackLayout *tabItem="{title: 'Featured'}">
-            <Featured></Featured>
-        </StackLayout>
-    </TabView>
-</GridLayout>
+<TabView #tabview sdkExampleTitle sdkToggleNavButton>
+    <StackLayout *tabItem="{title: 'Home'}">
+        <Home></Home>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Browse'}">
+        <Browse></Browse>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Search'}">
+        <Search></Search>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Featured'}">
+        <Featured></Featured>
+    </StackLayout>
+</TabView>
