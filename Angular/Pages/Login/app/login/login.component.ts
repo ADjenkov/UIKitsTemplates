@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
     ngOnInit(): void {
     }
 
+    //TODO: static 'that' approach must be removed when nativescript-facebook plugin is fixed
     onLoginFacebook(error: string, loginResponse: Facebook.LoginResponse) {
         if (!error && loginResponse) {
             LoginComponent.that.routerExtensions.navigate(["/home"], { clearHistory: true });
