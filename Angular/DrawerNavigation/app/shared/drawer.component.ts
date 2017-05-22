@@ -48,7 +48,7 @@ export class DrawerComponent implements OnInit {
         this.routerExtensions.navigate([route]);
     }
 
-    ispageSelected(pageTitle:string): boolean {
+    isPageSelected(pageTitle:string): boolean {
         return pageTitle === this.selectedPage;
     }
 }
