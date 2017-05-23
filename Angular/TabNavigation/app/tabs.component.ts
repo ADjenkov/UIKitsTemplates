@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { TabView, SelectedIndexChangedEventData } from "ui/tab-view";
 
 @Component({
     selector: "TabsComponent",
@@ -12,10 +11,6 @@ export class TabsComponent implements OnInit {
     }
 
     ngOnInit(): void {
-
-    }
-
-    public tabViewIndexChange(selectedIndexTab) {
 
     }
 }
