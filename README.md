@@ -29,29 +29,29 @@
   - browse/browse.component.html|ts|css
   - featured/featured.component.html|ts|css
 + **Angular/MasterDetail**
-  - cars/cars-list.component.html|ts|css
+  - cars/car-list.component.html|ts|css
   - cars/car-detail/car-detail.component.html|ts|css
   - cars/shared/car.model.ts
-  - cars/shared/cars.service.ts
+  - cars/shared/car.service.ts
 + **Vanilla/TabNavigation**
   - browse/BrowseView.xml|js|ts
   - featured/FeaturedView.xml|js|ts
   - tabs-page.xml|js|css
 + **Vanilla/MasterDetail**
-  - cars/cars-list-page.xml|js|ts
-  - cars/cars-list-view-model.js|ts
+  - cars/car-list-page.xml|js|ts
+  - cars/car-list-view-model.js|ts
   - cars/car-detail/car-detail-page.xml|js|ts
   - cars/shared/car-model.js|ts
-  - cars/shared/cars-service.js|ts
+  - cars/shared/car-service.js|ts
 
 ##### Do follow a pattern that describes the symbol's feature then its type. The recommended pattern is **feature.type.ts|css|html** for Angular and **feature-type.ts|js|css|xml** for Vanilla. Exception: Vanilla custom components get the selector from the file name, so they should be named **FeatureView.xml|js|css** since they are of type View.
 + **Angular/TabNavaigtion**
   - browse.component.html|ts|css
   - featured.component.html|ts|css
 + **Angular/MasterDetail**
-  - cars-list.component.html|ts|css
+  - car-list.component.html|ts|css
   - car.model.ts
-  - cars.service.ts
+  - car.service.ts
 + **Vanilla/TabNavigation**
   - BrowseView.xml|js|ts
   - FeaturedView.xml|js|ts
@@ -59,15 +59,15 @@
 + **Vanilla/MasterDetail**
   - cars-list-page.html|js|ts
   - car-model.js|ts
-  - cars-service.js|ts
-  - cars-list-view-model.js|ts
+  - car-service.js|ts
+  - car-list-view-model.js|ts
 
 ##### Do match the name of the symbol to the name of the file.
 + **Angular/MasterDetail**
-  - cars-list.component.ts -> class CarsListComponent
+  - car-list.component.ts -> class CarListComponent
   - car.model.ts -> class Car (exception)
 + **Vanilla/MasterDetail**
-  - cars-list-view-model.ts -> class CarsListViewModel
+  - car-list-view-model.ts -> class CarListViewModel
   - car-model.ts -> class Car (exception)
   
 ##### Do name the style file [component-name].component.css, where [component-name] is the component name.
