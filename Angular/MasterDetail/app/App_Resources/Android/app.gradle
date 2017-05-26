@@ -8,7 +8,7 @@
 android {  
   defaultConfig {  
     generatedDensities = []
-    applicationId = "org.nativescript.MasterDetails"  
+    applicationId = "org.nativescript.ng.masterdetail"  
   }  
   aaptOptions {  
     additionalParameters "--no-version-vectors"  

@@ -1,52 +1,34 @@
 <ActionBar [title]="car.name" icon="">
     <NavigationButton (tap)="onGoBack()" android.systemIcon="ic_menu_back"></NavigationButton>
+    <ActionItem text="Edit" position="right" (tap)="onEdit()"></ActionItem>
 </ActionBar>
 
-<GridLayout>
-    <ScrollView>
-        <StackLayout>
-            <Image [src]="car.imageUrl"></Image>
+<GridLayout rows="auto,auto">
+    <Image [src]="car.imageUrl"></Image>
 
-            <StackLayout>
-                <Label text="Price"></Label>
-                <Label>
-                    <FormattedString>
-                        <Span text="€"></Span>
-                        <Span [text]="car.price"></Span>
-                        <Span text="/day"></Span>
-                    </FormattedString>
-                </Label>
-            </StackLayout>
+    <GridLayout row="1" rows="*,*,*,*,*,*" columns="*,2*">
+        <Label text="Price"></Label>
+        <Label col="1">
+            <FormattedString>
+                <Span text="€"></Span>
+                <Span [text]="car.price"></Span>
+                <Span text="/day"></Span>
+            </FormattedString>
+        </Label>
 
-            <StackLayout>
-                <Label text="Class"></Label>
-                <Label [text]="car.class"></Label>
-            </StackLayout>
+        <Label text="Class" row="1"></Label>
+        <Label [text]="car.class" row="1" col="1"></Label>
 
-            <StackLayout>
-                <Label text="Transmission"></Label>
-                <Label [text]="car.transmission"></Label>
-            </StackLayout>
+        <Label text="Doors" row="2"></Label>
+        <Label [text]="car.doors" row="2" col="1"></Label>
 
-            <StackLayout>
-                <Label text="Doors"></Label>
-                <Label [text]="car.doors"></Label>
-            </StackLayout>
+        <Label text="Seats" row="3"></Label>
+        <Label [text]="car.seats" row="3" col="1"></Label>
 
-            <StackLayout>
-                <Label text="Luggage"></Label>
-                <Label [text]="car.luggage"></Label>
-            </StackLayout>
+        <Label text="Transmission" row="4"></Label>
+        <Label [text]="car.transmission" row="4" col="1"></Label>
 
-            <StackLayout>
-                <Label text="Seats"></Label>
-                <Label [text]="car.seats"></Label>
-            </StackLayout>
-
-            <StackLayout>
-                <Label text="Other information"></Label>
-                <Label [text]="car.description"></Label>
-            </StackLayout>
-        </StackLayout>
-    </ScrollView>
+        <Label text="Luggage" row="5"></Label>
+        <Label [text]="car.luggage" row="5" col="1"></Label>
+    </GridLayout>
 </GridLayout>

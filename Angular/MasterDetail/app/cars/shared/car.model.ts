@@ -10,18 +10,20 @@ export class Car {
     price: number;
     transmission: string;
     imageUrl: string;
+    imageStoragePath: string;
 
-    constructor(optionJson: any) {
-        this.id = optionJson.Id;
-        this.name = optionJson.Name;
-        this.hasAC = optionJson.AC;
-        this.description = optionJson.Description;
-        this.seats = optionJson.Seats;
-        this.luggage = optionJson.Luggage;
-        this.class = optionJson.Class;
-        this.doors = optionJson.Doors;
-        this.price = optionJson.Price;
-        this.transmission = optionJson.Transmission;
-        this.imageUrl = optionJson.ImageUrl;
+    constructor(options: any) {
+        this.id = options.id;
+        this.name = options.name;
+        this.hasAC = options.ac;
+        this.description = options.description;
+        this.seats = options.seats;
+        this.luggage = Number(options.luggage);
+        this.class = options.class;
+        this.doors = Number(options.doors);
+        this.price = Number(options.price);
+        this.transmission = options.transmission;
+        this.imageUrl = options.imageUrl;
+        this.imageStoragePath = options.imageStoragePath;
     }
 }
