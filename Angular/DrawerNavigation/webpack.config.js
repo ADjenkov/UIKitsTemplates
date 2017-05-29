@@ -8,10 +8,9 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const { AotPlugin } = require("@ngtools/webpack");
 
-const mainSheet = `app.css`;
-
 module.exports = env => {
     const platform = getPlatform(env);
+    const mainSheet = `app.${platform}.css`;
 
     // Default destination inside platforms/<platform>/...
     const path = resolve(nsWebpack.getAppPath(platform));
@@ -27,8 +26,8 @@ module.exports = env => {
         [mainSheet]: `./${mainSheet}`,
     };
 
-    const rules = getRules();
-    const plugins = getPlugins(platform, env);
+    const rules = getRules(mainSheet);
+    const plugins = getPlugins(platform, env, mainSheet);
     const extensions = getExtensions(platform);
 
     return {
@@ -69,7 +68,7 @@ function getPlatform(env) {
         () => { throw new Error("You need to provide a target platform!") };
 }
 
-function getRules() {
+function getRules(mainSheet) {
     return [
         {
             test: /\.html$|\.xml$/,
@@ -120,7 +119,7 @@ function getRules() {
     ];
 }
 
-function getPlugins(platform, env) {
+function getPlugins(platform, env, mainSheet) {
     let plugins = [
         new ExtractTextPlugin(mainSheet),
 
