@@ -4,8 +4,8 @@ if (global.TNS_WEBPACK) {
 
     //register application modules
     global.registerModule("tabs-page", function () { return require("./tabs-page"); });
-    global.registerModule("browse-component/Browse", function () { return require("./browse-component/Browse"); });
-    global.registerModule("featured-component/Featured", function () { return require("./featured-component/Featured"); });
-    global.registerModule("home-component/Home", function () { return require("./home-component/Home"); });
-    global.registerModule("search-component/Search", function () { return require("./search-component/Search"); });
+    global.registerModule("browse/Browse", function () { return require("./browse/BrowseView"); });
+    global.registerModule("featured/Featured", function () { return require("./featured/FeaturedView"); });
+    global.registerModule("home/Home", function () { return require("./home/HomeView"); });
+    global.registerModule("search/Search", function () { return require("./search/SearchView"); });
 }
