@@ -4,7 +4,6 @@ if (global.TNS_WEBPACK) {
 
     //register application modules
     global.registerModule("nativescript-telerik-ui/sidedrawer", function () { return require("../node_modules/nativescript-telerik-ui/sidedrawer"); });
-    global.registerModule("nativescript-telerik-ui/sidedrawer/drawerpage", function () { return require("../node_modules/nativescript-telerik-ui/sidedrawer/drawerpage"); });
 
     global.registerModule("shared/my-drawer/MyDrawer", function () { return require("./shared/my-drawer/MyDrawer"); });
     global.registerModule("home/home-page", function () { return require("./home/home-page"); });

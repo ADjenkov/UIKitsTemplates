@@ -3,8 +3,7 @@ if ((<any>global).TNS_WEBPACK) {
     require("bundle-entry-points");
 
     //register application modules
-    global.registerModule("nativescript-telerik-ui/sidedrawer", ()=> require('../node_modules/nativescript-telerik-ui/sidedrawer'))
-    global.registerModule("nativescript-telerik-ui/sidedrawer/drawerpage", ()=> require('../node_modules/nativescript-telerik-ui/sidedrawer/drawerpage'))
+    global.registerModule("nativescript-telerik-ui/sidedrawer", () => require('../node_modules/nativescript-telerik-ui/sidedrawer'))
 
     global.registerModule("shared/my-drawer/MyDrawer", () => require("./shared/my-drawer/MyDrawer"));
     global.registerModule("home/home-page", () => require("./home/home-page"));
