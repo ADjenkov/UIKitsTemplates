@@ -7,40 +7,46 @@
 // End custom common variables
 
 // Drawer navigation custom styles
-.sidedrawer-left .sidedrawer-header-image {
-    margin-bottom: 15;
-}
+.sidedrawer {
+    &.sidedrawer-left {
+        .sidedrawer-header-image {
+            margin-bottom: 15;
+        }
 
-.sidedrawer-left .footnote {
-    color: rgba($ab-color, 0.5);
-}
+        .footnote {
+            color: rgba($ab-color, 0.5);
+        }
+    }
 
-.sidedrawer-header {
-    background-color: $ab-background;
-}
+    .sidedrawer-header {
+        background-color: $ab-background;
 
-.sidedrawer-header .sidedrawer-header-brand {
-    color: $ab-color;
-}
+        .sidedrawer-header-brand {
+            color: $ab-color;
+        }
+    }
 
-.sidedrawer-content {
-    background-color: $side-drawer-background;
-}
+    .sidedrawer-content {
+        background-color: $side-drawer-background;
+        height: 100%;
 
-.sidedrawer-content,
-.sidedrawer-content ListView {
-    height: 100%;
-}
+        ListView {
+            height: 100%;
 
-.sidedrawer-list-item Label {
-    vertical-align: center;
-}
+            .selected {
+                background-color: $item-active-background;
+                color: $item-active-color;
+            }
 
-.sidedrawer-content ListView .selected {
-    background-color: $item-active-background;
-    color: $item-active-color;
-}
+            .mdi {
+                color: $item-active-icon-color;
+            }
+        }
+    }
 
-.sidedrawer-content ListView .selected .mdi {
-    color: $item-active-icon-color;
+    .sidedrawer-list-item {
+        Label {
+            vertical-align: center;
+        }
+    }
 }
