@@ -135,3 +135,19 @@
 
 ##### Use RadSideDrawer only as a root to the Page element. In Angular, the Page element is hidden - use at root level.
 ##### Never Use RadSideDrawer in custom component in Vanilla or shared component in Angular.
+
+## SASS Specific
++ **Angular**
+##### Each app has several SASS files - common and specific.
+
+##### All common files should be placed in the SASS folder which is on the app level and should start with “_”.
+##### After that they have to be imported in the sass/_app.common.scss file. 
+
+##### The specific files are two types. One for the platforms (app.android.scss or app.ios.scss) and the others - for the components.
+
+##### The platform specific SASS files imports everything that is common for the app and the platform. They are compiled to the app.android.css and app.ios.css that are imported automatically from the compiler.
+
+##### Specific files such as drawer.component.scss, should be in the same folder as the component and start in the same way as the component. Each one of those files will be compiled to css file, which has to be imported in the component.ts file like this - styleUrls: ["./drawer.component.css"]. 
+
+##### If the specific SASS file use some common variables, they should be imported at the begging of the file.
+
