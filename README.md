@@ -57,7 +57,7 @@
   - FeaturedView.xml|js|ts
   - tabs-page.xml|js|css
 + **Vanilla/MasterDetail**
-  - cars-list-page.html|js|ts
+  - car-list-page.html|js|ts
   - car-model.js|ts
   - car-service.js|ts
   - car-list-view-model.js|ts
