@@ -112,6 +112,7 @@
 ##### Do name event handler methods with the prefix on followed by the event name.
 + loaded -> onLoaded()
 + itemTap -> onItemTap()
++ Consider specifiying the semantic element that is tapped, for example onCarItemTap() or onDrawerButtonTap().
 
 ##### Do limit logic in a component/code-behind/view-model to only that required for the view. All other logic should be delegated to services.
 
