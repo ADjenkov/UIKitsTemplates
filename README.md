@@ -114,6 +114,8 @@
 + itemTap -> onItemTap()
 + Consider specifiying the semantic element that is tapped, for example onCarItemTap() or onDrawerButtonTap().
 
+##### [TS/JS] Consider declaring "event" handlers (i.e. "tap" handlers) in page code-behind (and not directly in the view model) -- event handler then can call a view model method on its own.
+
 ##### Do limit logic in a component/code-behind/view-model to only that required for the view. All other logic should be delegated to services.
 
 ##### Do put presentation logic in the component class, and not in the template. 
